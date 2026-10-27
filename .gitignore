@@ -1,46 +1,23 @@
-bin/
-obj/
-publish/
-Releases/
-*.user
-.vs/
-
-# WPF temporary project files (generated during builds)
-*_wpftmp.csproj
-
-# Local agent / editor config (contains machine-specific absolute paths)
-.claude/
-CLAUDE.md
-AGENTS.md
-.cursor/
-.cursorrules
-.github/copilot-instructions.md
-.idea/
-*.suo
-TestResults/
-
-# Third-party binary reference material. Kept locally, never committed.
-# These are other projects' compiled artifacts (no redistribution licence) and
-# nothing in the build references them.
-OpenSteamTool-releases/
-SteamTools-releases/
-
-# Maintainer-only scratch scripts and release-mirroring workflows
-tools/
-
-# Internal notes, server infrastructure config, and saved copies of third-party docs sites.
-# Kept locally; none of it belongs in the public repo.
+build/
+build-*/
+dist/
+ui/bin/
+ui/obj/
+ui/publish/
+ui-linux/build/
+flatpak/.flatpak-builder/
+flatpak/build-dir/
+flatpak/repo/
+flatpak/cloud_redirect.so
+flatpak/cloud_redirect_cli
+build.ps1
+ui/Resources/cloud_redirect_cli.exe
+tests/*
+!tests/pending_ops_journal_tests.cpp
+ui/CloudRedirect.Tests/
+src/testutil/
 docs/
-
-# Maintainer-only release tooling
-build-release.ps1
-
-# Never commit
-*.lnk
-*.log
-.env
-.env.*
-*.pfx
-*.p12
-*.pem
-*.snk
+tools/
+flatpak/release.sh
+ui/native/
+release-*/
