@@ -16,11 +16,11 @@ First, some back story:
 
 Once upon a time, there was a tool called STTools. STTools supported cloud saving, kind of.
 
-Later, Valve patched the (sinful) thing STTools did to sync saves. Specifically, STTools rewrote requests to AppID 760, which is ST Screenshots. It sent all ST Cloud requests for non-owned AppIDs there. It did not create prefixes for each individual game, which means that each lua app shared the saves with all others. This can cause saves to conflict if multiple games use the same save file name. This also means that your saves are replicated in the `ST/Userdata/<STid>/<appid for lua game>` folder for each lua app.
+Later, Volvo patched the (sinful) thing STTools did to sync saves. Specifically, STTools rewrote requests to AppID 760, which is ST Screenshots. It sent all ST Cloud requests for non-owned AppIDs there. It did not create prefixes for each individual game, which means that each lua app shared the saves with all others. This can cause saves to conflict if multiple games use the same save file name. This also means that your saves are replicated in the `ST/Userdata/<STid>/<appid for lua game>` folder for each lua app.
 
 It also did not support ST AutoCloud games at all. It would simply show a fake success message for those games.
 
-What _this_ tool does is redirect ST Cloud requests for games that are injected to Google Drive/OneDrive/a local folder, including AutoCloud games. Everything is native inside the ST Client, but the actual data is read/written to and from your cloud account. This was much harder to do than just redirecting read/write to an AppID that your account owns, but it was fun to make. It also is less likely to piss off Valve.
+What _this_ tool does is redirect ST Cloud requests for games that are injected to Google Drive/OneDrive/a local folder, including AutoCloud games. Everything is native inside the ST Client, but the actual data is read/written to and from your cloud account. This was much harder to do than just redirecting read/write to an AppID that your account owns, but it was fun to make. It also is less likely to piss off Volvo.
 
 ## How it works
 
